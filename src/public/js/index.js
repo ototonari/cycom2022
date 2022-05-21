@@ -1,7 +1,28 @@
-import Swiper from "swiper";
+ // import Swiper bundle with all modules installed
+ import Swiper from 'C:\Users\maki_\cycom2022\src\public\js\swiper-bundle.min.js';
 
-const { default: Swiper } = require("swiper");
+ // import styles bundle
+ import 'C:\Users\maki_\cycom2022\src\public\css\swiper-bundle.min.css';
 
-{
-  const swiper = new Swiper("swiper", {});
-}
+ // init Swiper:
+ const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'vertical',
+    loop: true,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
